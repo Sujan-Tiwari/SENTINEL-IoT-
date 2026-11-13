@@ -1,0 +1,34 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Runtime / telemetry files
+sentinel_telemetry.json
+sentinel_telemetry.json.tmp
+*.log
+
+# Sensitive config (tokens / credentials)
+telegram_config.json
+
+# Binaries
+cloudflared.exe
+*.exe
+
+# Streamlit credentials
+.streamlit/credentials.toml
+.streamlit/secrets.toml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
