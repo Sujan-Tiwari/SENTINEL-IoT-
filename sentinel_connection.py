@@ -2,7 +2,12 @@ import os
 import json
 import time
 from datetime import datetime
-import serial.tools.list_ports as list_ports
+try:
+    import serial.tools.list_ports as list_ports
+    SERIAL_AVAILABLE = True
+except ImportError:
+    list_ports = None
+    SERIAL_AVAILABLE = False
 
 TELEMETRY_FILENAME = "sentinel_telemetry.json"
 DEFAULT_HEARTBEAT_TIMEOUT = 90  # seconds (matches ESP32 ~60s periodic scan interval)
